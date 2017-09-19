@@ -1,0 +1,21 @@
+server:
+  port: 8990
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/rnd.elastic?characterEncoding=utf8
+    username: root
+    password: 1234
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        search.default.directory_provider: filesystem
+        search.default.indexBase: elastic/index/default
+logging:
+  level:
+    org.hibernate.SQL: TRACE
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+    org.springframework.web: DEBUG
+    org.hibernate: ERROR
