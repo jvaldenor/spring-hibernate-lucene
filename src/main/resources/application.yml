@@ -12,7 +12,7 @@ spring:
         show_sql: true
         format_sql: true
         search.default.directory_provider: filesystem
-        search.default.indexBase: elastic/index/default
+        search.default.indexBase: lucene/index/default
 logging:
   level:
     org.hibernate.SQL: TRACE
